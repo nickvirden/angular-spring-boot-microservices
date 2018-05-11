@@ -1,0 +1,7 @@
+ALTER TABLE Users
+ADD COLUMN
+    FIRST_NAME varchar(100);
+
+ALTER TABLE Users
+ADD COLUMN
+    LAST_NAME varchar(100);
