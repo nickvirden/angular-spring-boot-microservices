@@ -1,0 +1,11 @@
+#add-list {
+	width: 100%;
+	margin: 10px;
+}
+
+.list-area {
+	margin-top: 10px;
+    height: 100vh;
+    overflow-y: auto;
+    white-space: nowrap;
+}

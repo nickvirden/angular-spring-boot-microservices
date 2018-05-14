@@ -36,21 +36,39 @@ services:
     # Does not guarantee order!
     depends_on:
       - eureka
-      #- postgresdev
+      # - postgresdev
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
-  songs-api:
+  lists-api:
     image: anapsix/alpine-java:8_jdk_unlimited
     ports:
       - '8082:8082'
     working_dir: /app
     volumes:
-      - ./songs-api:/app
+      - ./lists-api:/app
+    # Ensure that docker finds a eureka instance (in this case). Could be a database, for example.
+    # Does not guarantee order!
     depends_on:
       - eureka
-      #- postgresdev
+      # - postgresdev
+    command: './gradlew bootRun'
+    environment:
+      - GRADLE_USER_HOME=cache
+      - SPRING_PROFILES_ACTIVE=dev
+  notes-api:
+    image: anapsix/alpine-java:8_jdk_unlimited
+    ports:
+      - '8083:8083'
+    working_dir: /app
+    volumes:
+      - ./notes-api:/app
+    # Ensure that docker finds a eureka instance (in this case). Could be a database, for example.
+    # Does not guarantee order!
+    depends_on:
+      - eureka
+      # - postgresdev
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
@@ -64,9 +82,9 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
       - POSTGRES_DB=pgdev
-  flyway:
-    image: jimmyoak/flyway:4.0.3
-    command: "wait-for-it --timeout=30 --strict postgres:5432 -- flyway migrate"
-    volumes:
-      - './flyway/conf:/flyway/conf'
-      - './flyway/sql:/flyway/sql'
+  # flyway:
+  #   image: jimmyoak/flyway:4.0.3
+  #   command: "wait-for-it --timeout=30 --strict postgres:5432 -- flyway migrate"
+  #   volumes:
+  #     - './flyway/conf:/flyway/conf'
+  #     - './flyway/sql:/flyway/sql'

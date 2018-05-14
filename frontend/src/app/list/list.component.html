@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="list-title" contenteditable="true">List Title</div>
+	<div class="list-card-area">
+		<note *ngFor="let note of notes; let i = index" [notes]="notes" [noteIndex]="i" (onDeleteNote)="removeCard($event, i)"></note>
+		<a class="btn grey" (click)="addCard()">Add a card</a>
+	</div>
+	<a class="yello-btn" (click)="sendListIndexToAppToRemoveList()"><i class="material-icons">clear</i></a>
+</div>

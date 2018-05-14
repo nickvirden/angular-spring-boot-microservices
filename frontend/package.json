@@ -1,9 +1,9 @@
 {
-  "name": "frontend",
+  "name": "ui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,14 +21,15 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "core-js": "^2.5.4",
+    "materialize-css": "^0.100.2",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
-    "@angular-devkit/build-angular": "~0.6.0",
+    "@angular-devkit/build-angular": "~0.6.1",
     "typescript": "~2.7.2",
-    "@angular/cli": "~6.0.0",
+    "@angular/cli": "~6.0.1",
     "@angular/language-service": "^6.0.0",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",

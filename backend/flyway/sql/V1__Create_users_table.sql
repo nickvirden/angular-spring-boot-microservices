@@ -1,4 +1,6 @@
 CREATE TABLE Users (
     ID serial,
-    USER_NAME varchar(100) NOT NULL
+    EMAIL varchar(100) NOT NULL,
+    # PASSWORD varchar(100) NOT NULL,
+    NAME varchar(100) NOT NULL
 );

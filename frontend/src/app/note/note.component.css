@@ -1,0 +1,17 @@
+.title-area {
+	margin: 5px;
+	padding-right: 25px;
+}
+
+.yello-btn {
+	height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+
+.material-icons {
+	color: grey;
+}
