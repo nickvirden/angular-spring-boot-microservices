@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/31093285/how-do-i-get-the-element-being-edited
+
+https://git.generalassemb.ly/ed-product-library/java-for-the-web/blob/master/Sample%20Apps/spring-boot-microservices-angular/ui
